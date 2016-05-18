@@ -1,0 +1,18 @@
+﻿@model IEnumerable<BookProject1.Models.MovieReviews>
+
+@{
+    ViewBag.Title = "Movie Reviews";
+}
+
+<h2>Movie Reviews</h2>
+
+    Hello Reviewer, We are having @Model.Count() Reviews.
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
+@foreach (var item in Model)
+{
+    @Html.Partial("_movieReviews", item)
+}
